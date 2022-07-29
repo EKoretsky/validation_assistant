@@ -5,7 +5,11 @@ String? requiredCallBack(String? value, {String? message}) {
   return null;
 }
 
-String? maxLengthCallBack(String? value, {required int maxLength, required String? message}) {
+String? maxLengthCallBack(
+  String? value, {
+  required int maxLength,
+  required String? message,
+}) {
   if (value != null && value.length > maxLength) {
     print(value);
     return message ?? 'length more than $maxLength';
