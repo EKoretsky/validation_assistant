@@ -10,3 +10,4 @@
 
 - files have been formatted.
 - added documentation for public methods.
+- added more information to README.md
