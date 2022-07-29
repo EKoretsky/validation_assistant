@@ -11,11 +11,15 @@ and the Flutter guide for
 [developing packages and plugins](https://flutter.dev/developing-packages). 
 -->
 
-Very simple form validation helper
+# Very simple and light form validation assistant.
 
 ## Features
 
 [//]: # (List what your package can do. Maybe include images, gifs, or videos.)
+
+- Very simple.
+- Very light.
+- Zero dependencies.
 
 ## Getting started
 
@@ -30,10 +34,50 @@ Very simple form validation helper
 [//]: # (to `/example` folder. )
 
 ```dart
-const ValidationAssistant()
-  ..required()
-  ..maxLength(10)
-  ..add(String? Function(String? value))
+
+final validationAssistant = ValidationAssistant();
+
+...
+
+// with default messages
+TextFormField(
+  ...
+  validator: validationAssistant
+    ..required()
+    ..maxLength(10)
+)
+
+// with custom messages.
+TextFormField(
+  ...
+  validator: validationAssistant
+    ..required('custom error message')
+    ..maxLength(10, 'custom error message')
+)
+```
+
+#### You can add your own function to check.
+
+```dart
+final validationAssistant = ValidationAssistant();
+
+...
+    
+final String customValidationFunction(String? value) {
+  if (value < 5) {
+    return 'custom error message';  
+  }
+  return null;
+}
+
+...
+
+TextFormField(
+  ...
+  validator: validationAssistant
+    ..required('custom error message')
+    ..add(customValidationFunction)
+)
 ```
 
 ## Additional information

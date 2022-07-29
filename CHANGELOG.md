@@ -4,4 +4,9 @@
 
 ## 1.0.1
 
-- fix documentation 
+- fix documentation.
+
+## 1.0.2
+
+- files have been formatted.
+- added documentation for public methods.
