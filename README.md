@@ -27,6 +27,15 @@ and the Flutter guide for
 
 [//]: # (start using the package.)
 
+```dart
+    flutter pub get validation_assistant
+```
+or
+```dart
+  dependencies:
+    validation_assistant: 1.0.2
+```
+
 ## Usage
 
 [//]: # (Include short and useful examples for package users. Add longer examples)
