@@ -72,7 +72,7 @@ final validationAssistant = ValidationAssistant();
 
 ...
     
-final String customValidationFunction(String? value) {
+final String? customValidationFunction(String? value) {
   if (value < 5) {
     return 'custom error message';  
   }

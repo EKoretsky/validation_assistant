@@ -11,3 +11,8 @@
 - files have been formatted.
 - added documentation for public methods.
 - added more information to README.md
+
+## 1.0.3
+
+- add example file
+- fix documentation
