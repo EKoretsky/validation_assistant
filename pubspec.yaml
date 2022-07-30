@@ -1,13 +1,10 @@
 name: validation_assistant
 description: Very simple and light form validation helper.
-version: 1.0.2
+version: 1.0.3
 homepage: https://github.com/EKoretsky/validation_assistant.git
 
 environment:
   sdk: '>=2.17.6 <3.0.0'
-
-# dependencies:
-#   path: ^1.8.0
 
 dev_dependencies:
   lints: ^2.0.0
