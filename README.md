@@ -33,7 +33,7 @@ and the Flutter guide for
 or
 ```dart
   dependencies:
-    validation_assistant: 1.0.2
+    validation_assistant: 1.0.3
 ```
 
 ## Usage
