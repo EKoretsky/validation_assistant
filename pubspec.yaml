@@ -1,10 +1,10 @@
 name: validation_assistant
-description: Very simple and light form validation helper. This package contains a limited set of preset methods for validation. Its main task is to more conveniently use its own validation functions.
-version: 1.0.3
+description: Very simple and light form validation helper. Its main task is to more conveniently use its own validation functions.
+version: 1.0.4
 homepage: https://github.com/EKoretsky/validation_assistant.git
 
 environment:
-  sdk: '>=2.17.6 <3.0.0'
+  sdk: '>=2.17.1 <3.0.0'
 
 dev_dependencies:
   lints: ^2.0.0

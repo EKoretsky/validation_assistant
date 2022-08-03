@@ -16,3 +16,7 @@
 
 - add example file
 - fix documentation
+
+## 1.0.4
+
+- min version sdk 2.17.1
