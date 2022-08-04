@@ -12,6 +12,8 @@ and the Flutter guide for
 -->
 
 # Very simple and light form validation assistant.
+### Use your own validation functions with great convenience.
+
 
 ## Features
 
@@ -23,8 +25,6 @@ and the Flutter guide for
 
 ## Getting started
 
-[//]: # (List prerequisites and provide or point to information on how to)
-
 [//]: # (start using the package.)
 
 ```dart
@@ -33,14 +33,10 @@ and the Flutter guide for
 or
 ```dart
   dependencies:
-    validation_assistant: 1.0.3
+    validation_assistant: 1.1.0
 ```
 
 ## Usage
-
-[//]: # (Include short and useful examples for package users. Add longer examples)
-
-[//]: # (to `/example` folder. )
 
 ```dart
 
@@ -54,6 +50,7 @@ TextFormField(
   validator: validationAssistant
     ..required()
     ..maxLength(10)
+    ..regExp(r'^\[[0-9]+:[0-9]+\]')
 )
 
 // with custom messages.
@@ -62,6 +59,7 @@ TextFormField(
   validator: validationAssistant
     ..required('custom error message')
     ..maxLength(10, 'custom error message')
+    ..regExp(r'^\[[0-9]+:[0-9]+\]', 'custom error message')
 )
 ```
 
@@ -89,7 +87,7 @@ TextFormField(
 )
 ```
 
-## Additional information
+[//]: # (## Additional information)
 
 [//]: # (Tell users more about the package: where to find more information, how to )
 
