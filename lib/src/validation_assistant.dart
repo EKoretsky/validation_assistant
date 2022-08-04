@@ -8,11 +8,13 @@ class ValidationAssistant {
 
   /// This method is allowing the class to be called as a function. You don't have to call it yourself.
   String? call(String? value) {
-    final function = _validators.firstWhere(
-      (func) => func(value) != null,
-      orElse: () => (value) => null,
-    );
-    return function(value);
+    for (final function in _validators) {
+      final validationResult = function(value);
+      if (validationResult != null) {
+        return validationResult;
+      }
+    }
+    return null;
   }
 
   /// This method checks if the field is required.
