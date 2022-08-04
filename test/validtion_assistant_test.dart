@@ -64,6 +64,7 @@ void main() {
 
     test('value length more than maxLength with custom error message', () {
       final validationAssistant = ValidationAssistant();
+
       validationAssistant.maxLength(5, 'custom error message');
       expect(validationAssistant('value more than five'), 'custom error message');
     });
