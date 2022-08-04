@@ -15,3 +15,15 @@ String? maxLengthCallBack(
   }
   return null;
 }
+
+String? regExpCallBack(
+    String? value, {
+      required  String rawString,
+      required String? message,
+    }) {
+  final regExp = RegExp(rawString);
+  if (value != null && regExp.hasMatch(value)) {
+    return message ?? 'RegExp has match';
+  }
+  return null;
+}
