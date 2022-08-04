@@ -24,8 +24,10 @@ class ValidationAssistant {
   /// Example:
   /// final validationAssistant = ValidationAssistant();
   /// ...
-  /// validation
-  ///   ...required('Custom message about error')
+  /// TextFormField(
+  ///   validator: validationAssistant
+  ///     ..required('Custom message about error')
+  /// )
   /// ```
   void required([String? message]) {
     _validators.add((value) => requiredCallBack(value, message: message));
@@ -39,8 +41,10 @@ class ValidationAssistant {
   /// Example:
   /// final validationAssistant = ValidationAssistant();
   /// ...
-  /// validation
-  ///   ...maxLength(5, 'Custom message about error')
+  /// TextFormField(
+  ///   validator: validationAssistant
+  ///     ..maxLength(5, 'Custom message about error')
+  /// )
   /// ```
   void maxLength(int maxLengthValue, [String? message]) {
     _validators.add((value) => maxLengthCallBack(
@@ -50,6 +54,19 @@ class ValidationAssistant {
         ));
   }
 
+  /// This method checks the field for a regular expression match.
+  ///
+  /// Takes a required parameter [rawString] with regular expression as raw string,
+  /// and an optional [message] parameter with a custom error message.
+  /// ```
+  /// Example:
+  /// final validationAssistant = ValidationAssistant();
+  /// ...
+  /// TextFormField(
+  ///   validator: validationAssistant
+  ///     ..regExp(r'^\[[0-9]+:[0-9]+\]', 'Custom message about error')
+  /// )
+  /// ```
   void regExp(String rawString, [String? message]) {
     _validators.add((value) => regExpCallBack(
       value,
@@ -71,9 +88,11 @@ class ValidationAssistant {
   ///   return null;
   /// }
   /// ...
-  /// validation
-  ///   ...add(customValidationFunction)
-  /// ``
+  /// TextFormField(
+  ///   validator: validationAssistant
+  ///     ..add(customValidationFunction)
+  /// )
+  /// ```
   void add(ValidationCallBack validationCallBack) {
     _validators.add((value) => validationCallBack(value));
   }
