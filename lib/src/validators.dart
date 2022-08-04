@@ -11,7 +11,6 @@ String? maxLengthCallBack(
   required String? message,
 }) {
   if (value != null && value.length > maxLength) {
-    print(value);
     return message ?? 'length more than $maxLength';
   }
   return null;
