@@ -64,7 +64,7 @@ class ValidationAssistant {
   /// ...
   /// TextFormField(
   ///   validator: validationAssistant
-  ///     ..regExp(r'^\[[0-9]+:[0-9]+\]', 'Custom message about error')
+  ///     ..regExp(r'^\d+$', 'Custom message about error')
   /// )
   /// ```
   void regExp(String rawString, [String? message]) {
