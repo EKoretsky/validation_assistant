@@ -50,7 +50,7 @@ TextFormField(
   validator: validationAssistant
     ..required()
     ..maxLength(10)
-    ..regExp(r'^\[[0-9]+:[0-9]+\]')
+    ..regExp(r'^\d+$')
 )
 
 // with custom messages.
@@ -59,7 +59,7 @@ TextFormField(
   validator: validationAssistant
     ..required('custom error message')
     ..maxLength(10, 'custom error message')
-    ..regExp(r'^\[[0-9]+:[0-9]+\]', 'custom error message')
+    ..regExp(r'^\d+$', 'custom error message')
 )
 ```
 
