@@ -69,10 +69,10 @@ class ValidationAssistant {
   /// ```
   void regExp(String rawString, [String? message]) {
     _validators.add((value) => regExpCallBack(
-      value,
-      rawString: rawString,
-      message: message,
-    ));
+          value,
+          rawString: rawString,
+          message: message,
+        ));
   }
 
   /// This method accepts an arbitrary validating function.

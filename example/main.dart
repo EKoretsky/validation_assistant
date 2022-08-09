@@ -19,7 +19,6 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-
   String? customValidationFunctionOne(String? value) {
     if (value != null && value.contains('@')) {
       return 'incorrect symbol';
@@ -47,7 +46,7 @@ class _MyHomePageState extends State<MyHomePage> {
             autovalidateMode: AutovalidateMode.onUserInteraction,
             validator: validationAssistant
               ..required('error message')
-              ..regExp(r'^\d+$')                  // digits only
+              ..regExp(r'^\d+$') // digits only
               ..add(customValidationFunctionOne)
               ..add(customValidationFunctionTwo),
           ),
