@@ -6,7 +6,6 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      theme: ThemeData(primarySwatch: Colors.blue),
       home: const MyHomePage(),
     );
   }
@@ -20,6 +19,7 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
+
   String? customValidationFunctionOne(String? value) {
     if (value != null && value.contains('@')) {
       return 'incorrect symbol';
@@ -36,7 +36,6 @@ class _MyHomePageState extends State<MyHomePage> {
 
   @override
   Widget build(BuildContext context) {
-    final theme = Theme.of(context);
     final validationAssistant = ValidationAssistant();
 
     return Scaffold(
@@ -48,6 +47,7 @@ class _MyHomePageState extends State<MyHomePage> {
             autovalidateMode: AutovalidateMode.onUserInteraction,
             validator: validationAssistant
               ..required('error message')
+              ..regExp(r'^\d+$')                  // digits only
               ..add(customValidationFunctionOne)
               ..add(customValidationFunctionTwo),
           ),
