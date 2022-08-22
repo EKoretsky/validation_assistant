@@ -54,6 +54,15 @@ class ValidationAssistant {
         ));
   }
 
+  // KORETSKY: Добавить документацию.
+  void minLength(int minLengthValue, [String? message]) {
+    _validators.add((value) => minLengthCallBack(
+      value,
+      minLength: minLengthValue,
+      message: message,
+    ));
+  }
+
   /// This method checks the field for a regular expression match.
   ///
   /// Takes a required parameter [rawString] with regular expression as raw string,
