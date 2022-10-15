@@ -16,6 +16,17 @@ String? maxLengthCallBack(
   return null;
 }
 
+String? minLengthCallBack(
+    String? value, {
+      required int minLength,
+      required String? message,
+    }) {
+  if (value != null && value.isNotEmpty && value.length < minLength) {
+    return message ?? 'length less than $minLength';
+  }
+  return null;
+}
+
 String? regExpCallBack(
   String? value, {
   required String rawString,

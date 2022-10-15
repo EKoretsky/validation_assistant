@@ -1,3 +1,6 @@
+## 1.1.1
+- add documentation for minLength method
+
 ## 1.1.0
 - add regExp method.
 - fixed bug where validation happened twice
