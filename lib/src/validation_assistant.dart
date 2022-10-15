@@ -54,7 +54,19 @@ class ValidationAssistant {
         ));
   }
 
-  // KORETSKY: Добавить документацию.
+  /// This method checks the field for exceeding the allowed number of characters.
+  ///
+  /// Takes a required parameter [minLengthValue] with the minimum number of characters allowed,
+  /// and an optional [message] parameter with a custom error message.
+  /// ```
+  /// Example:
+  /// final validationAssistant = ValidationAssistant();
+  /// ...
+  /// TextFormField(
+  ///   validator: validationAssistant
+  ///     ..minLength(5, 'Custom message about error')
+  /// )
+  ///
   void minLength(int minLengthValue, [String? message]) {
     _validators.add((value) => minLengthCallBack(
       value,
