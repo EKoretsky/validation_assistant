@@ -1,3 +1,7 @@
+## 1.1.2
+- formatting code
+- update pub points
+
 ## 1.1.1
 - add documentation for minLength method
 
