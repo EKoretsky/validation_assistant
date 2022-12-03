@@ -42,7 +42,8 @@ void main() {
       final validationAssistant = ValidationAssistant();
 
       validationAssistant.maxLength(5, 'users error message');
-      expect(validationAssistant('value more than five'), 'users error message');
+      expect(
+          validationAssistant('value more than five'), 'users error message');
     });
   });
 }

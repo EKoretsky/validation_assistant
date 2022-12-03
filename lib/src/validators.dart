@@ -17,10 +17,10 @@ String? maxLengthCallBack(
 }
 
 String? minLengthCallBack(
-    String? value, {
-      required int minLength,
-      required String? message,
-    }) {
+  String? value, {
+  required int minLength,
+  required String? message,
+}) {
   if (value != null && value.isNotEmpty && value.length < minLength) {
     return message ?? 'length less than $minLength';
   }
