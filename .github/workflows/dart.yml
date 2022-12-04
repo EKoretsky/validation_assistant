@@ -41,5 +41,8 @@ jobs:
       - name: Run tests
         run: dart test
 
+      - name: Add token
+        run: dart pub token add https://github.com/EKoretsky/validation_assistant
+
       - name: Publish to pub.dev
         run: dart pub publish -f
