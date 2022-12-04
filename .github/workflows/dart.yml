@@ -41,9 +41,6 @@ jobs:
       - name: Run tests
         run: dart test
 
-      - name: Add env
-        run  
-
       - name: Add token
         env:
           PUB_TOKEN: ${{secrets.PUB_DEV_TOKEN}}
