@@ -17,9 +17,7 @@ jobs:
 
     steps:
       - uses: actions/checkout@v3
-      - env:
-        PUB_TOKEN: ${{secrets.PUB_DEV_TOKEN}}
-
+  
       # Note: This workflow uses the latest stable version of the Dart SDK.
       # You can specify other versions if desired, see documentation here:
       # https://github.com/dart-lang/setup-dart/blob/main/README.md
@@ -43,7 +41,12 @@ jobs:
       - name: Run tests
         run: dart test
 
+      - name: Add env
+        run  
+
       - name: Add token
+        env:
+          PUB_TOKEN: ${{secrets.PUB_DEV_TOKEN}}
         run: dart pub token add https://github.com/EKoretsky/validation_assistant --env-var PUB_TOKEN
 
       - name: Publish to pub.dev
