@@ -28,7 +28,8 @@ void main() {
 
     test('value length more than maxLength without users message', () {
       validationAssistant.maxLength(5);
-      expect(validationAssistant('length more than five'), 'length more than 5');
+      expect(
+          validationAssistant('length more than five'), 'length more than 5');
     });
 
     test('value length more than maxLength with users error message', () {
