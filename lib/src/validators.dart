@@ -1,17 +1,17 @@
-String? requiredCallBack(String? value, {String? message}) {
-  if (value == null || value == '') {
-    return message ?? 'required';
-  }
-  return null;
+String? requiredCallBack(String? value, {required String message}) {
+  return switch (value) {
+    null || '' => message,
+    _ => null,
+  };
 }
 
 String? maxLengthCallBack(
   String? value, {
   required int maxLength,
-  required String? message,
+  required String message,
 }) {
   if (value != null && value.isNotEmpty && value.length > maxLength) {
-    return message ?? 'length more than $maxLength';
+    return message;
   }
   return null;
 }
@@ -19,10 +19,10 @@ String? maxLengthCallBack(
 String? minLengthCallBack(
   String? value, {
   required int minLength,
-  required String? message,
+  required String message,
 }) {
   if (value != null && value.isNotEmpty && value.length < minLength) {
-    return message ?? 'length less than $minLength';
+    return message;
   }
   return null;
 }
@@ -30,11 +30,11 @@ String? minLengthCallBack(
 String? regExpCallBack(
   String? value, {
   required String rawString,
-  required String? message,
+  required String message,
 }) {
   final regExp = RegExp(rawString);
   if (value != null && value.isNotEmpty && !regExp.hasMatch(value)) {
-    return message ?? 'RegExp has not match';
+    return message;
   }
   return null;
 }

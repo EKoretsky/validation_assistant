@@ -7,7 +7,7 @@ class ValidationAssistant {
   final _validators = <ValidationCallBack>[];
 
   /// This method is allowing the class to be called as a function. You don't have to call it yourself.
-  String? call(String? value) {
+  String? call([String? value]) {
     for (final function in _validators) {
       final validationResult = function(value);
       if (validationResult != null) {
@@ -30,7 +30,9 @@ class ValidationAssistant {
   /// )
   /// ```
   void required([String? message]) {
-    _validators.add((value) => requiredCallBack(value, message: message));
+    _validators.add(
+      (value) => requiredCallBack(value, message: message ?? 'required'),
+    );
   }
 
   /// This method checks the field for exceeding the allowed number of characters.
@@ -50,7 +52,7 @@ class ValidationAssistant {
     _validators.add((value) => maxLengthCallBack(
           value,
           maxLength: maxLengthValue,
-          message: message,
+          message: message ?? 'length more than $maxLengthValue',
         ));
   }
 
@@ -71,7 +73,7 @@ class ValidationAssistant {
     _validators.add((value) => minLengthCallBack(
           value,
           minLength: minLengthValue,
-          message: message,
+          message: message ?? 'length less than $minLengthValue',
         ));
   }
 
@@ -92,7 +94,7 @@ class ValidationAssistant {
     _validators.add((value) => regExpCallBack(
           value,
           rawString: rawString,
-          message: message,
+          message: message ?? 'RegExp has not match',
         ));
   }
 
@@ -115,6 +117,8 @@ class ValidationAssistant {
   /// )
   /// ```
   void add(ValidationCallBack validationCallBack) {
-    _validators.add((value) => validationCallBack(value));
+    _validators.add(
+      (value) => validationCallBack(value),
+    );
   }
 }
