@@ -1,6 +1,6 @@
 name: validation_assistant
 description: Very simple and light form validation helper. Its main task is to more conveniently use its own validation functions.
-version: 1.1.2
+version: 2.0.0
 homepage: https://github.com/EKoretsky/validation_assistant.git
 
 environment:
