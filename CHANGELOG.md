@@ -1,3 +1,7 @@
+## 2.0.0
+- update min version sdk ("^3.1.5)
+- fix tests
+
 ## 1.1.2
 - formatting code
 - update pub points
