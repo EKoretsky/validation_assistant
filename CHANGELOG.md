@@ -1,3 +1,6 @@
+## 2.0.1
+- fix docs and update dev_dependencies
+
 ## 2.0.0
 - update min version sdk ("^3.1.5)
 - fix tests
