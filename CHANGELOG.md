@@ -1,3 +1,8 @@
+## 2.0.2
+- fix docs and update dev_dependencies
+  - update lints from 4.0.0 to 5.1.0
+  - update test from 1.25.7 to 1.25.13
+
 ## 2.0.1
 - fix docs and update dev_dependencies
 
